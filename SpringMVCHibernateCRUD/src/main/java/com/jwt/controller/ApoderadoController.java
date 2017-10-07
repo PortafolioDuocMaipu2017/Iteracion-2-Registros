@@ -23,6 +23,7 @@ public class ApoderadoController {
 	
 	public ApoderadoController(){
 		System.out.println("ApoderadoController()");
+		System.out.println("Programas Operativos");
 	}
 	
 	@Autowired
