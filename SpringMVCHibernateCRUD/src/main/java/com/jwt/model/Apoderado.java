@@ -10,31 +10,38 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "ejecutivo")
-
-public class Ejecutivo implements Serializable{
+@Table(name = "apoderado")
+public class Apoderado implements Serializable {
 	private static final long serialVersionUID = -3465813074586302847L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	private int codigoApoderado;
 	
 	@Column
 	private String nombre;
-
+	
 	@Column
 	private String apellido;
-
+	
 	@Column
 	private String fechaIngreso;
+	
+	@Column
+	private int monto;
+	
+	@Column
+	private int rutAlCargo;
+	
+	@Column
+	private char dv;
 
-
-	public int getId() {
-		return id;
+	public int getCodigoApoderado() {
+		return codigoApoderado;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCodigoApoderado(int codigoApoderado) {
+		this.codigoApoderado = codigoApoderado;
 	}
 
 	public String getNombre() {
@@ -57,8 +64,33 @@ public class Ejecutivo implements Serializable{
 		return fechaIngreso;
 	}
 
-	public void setFechaIngreso(String fechaingreso) {
-		this.fechaIngreso = fechaingreso;
+	public void setFechaIngreso(String fechaIngreso) {
+		this.fechaIngreso = fechaIngreso;
 	}
 
+	public int getMonto() {
+		return monto;
+	}
+
+	public void setMonto(int monto) {
+		this.monto = monto;
+	}
+
+	public int getRutAlCargo() {
+		return rutAlCargo;
+	}
+
+	public void setRutAlCargo(int rutAlCargo) {
+		this.rutAlCargo = rutAlCargo;
+	}
+
+	public char getDv() {
+		return dv;
+	}
+
+	public void setDv(char dv) {
+		this.dv = dv;
+	}
+
+	
 }
