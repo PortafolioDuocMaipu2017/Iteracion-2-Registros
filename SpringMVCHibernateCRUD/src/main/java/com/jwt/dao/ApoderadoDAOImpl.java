@@ -41,4 +41,12 @@ public class ApoderadoDAOImpl implements ApoderadoDAO {
 		return (Apoderado)sesion.getCurrentSession().get(Apoderado.class, codigoApoderado);
 	}
 	
+	@Override
+	public Apoderado modificarMonto(Apoderado apoderado, Integer monto) {
+		Integer saldo = apoderado.getMonto();
+		Integer total = saldo + monto;
+		apoderado.setMonto(total);
+		return updateApoderado(apoderado);		
+	}
+	
 }

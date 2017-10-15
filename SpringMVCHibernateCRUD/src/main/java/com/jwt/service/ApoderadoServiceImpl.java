@@ -46,4 +46,8 @@ public class ApoderadoServiceImpl  implements ApoderadoService {
 	public void setApoderadoDAO(ApoderadoDAO apoderadoDAO) {
 		this.apoderadoDAO = apoderadoDAO;
 	}
+	public Apoderado setMonto(Apoderado apoderado, Integer monto) {
+		return apoderadoDAO.modificarMonto(apoderado, monto);
+	}
+	
 }

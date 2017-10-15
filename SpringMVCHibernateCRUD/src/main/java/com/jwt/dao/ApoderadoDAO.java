@@ -15,4 +15,6 @@ public interface ApoderadoDAO {
 	public Apoderado updateApoderado(Apoderado apoderado);
 
 	public Apoderado getApoderado(int codigoApoderado);
+	
+	public Apoderado modificarMonto(Apoderado apoderado, Integer monto);
 }

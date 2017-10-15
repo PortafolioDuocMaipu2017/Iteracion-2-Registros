@@ -17,6 +17,11 @@
         <br/>
         Registrar Encargado de Curso
         <a href="nuevoEncargado">IR</a>
+        <br/>
+        registrar Actividad
+        
+        <a href="nuevoActividad">IR</a>
+        
     </div>
 </body>
 </html>

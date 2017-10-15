@@ -31,7 +31,9 @@
 					<td>${apoderado.rutAlCargo}-${apoderado.dv}</td>
 					<td><a href="editarApoderado?codigoApoderado=${apoderado.codigoApoderado}">Editar</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a
-						href="borrarApoderado?codigoApoderado=${apoderado.codigoApoderado}">Borrar</a></td>
+						href="borrarApoderado?codigoApoderado=${apoderado.codigoApoderado}">Borrar</a>
+						&nbsp;&nbsp;&nbsp;&nbsp;<a
+						href="montoApoderado?codigoApoderado=${apoderado.codigoApoderado}">Agregar Monto</a></td>
 
 				</tr>
 			</c:forEach>

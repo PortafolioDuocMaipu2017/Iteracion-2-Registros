@@ -15,4 +15,6 @@ public interface ApoderadoService {
 	public Apoderado updateApoderado(Apoderado apoderado);
 
 	public Apoderado getApoderado(int codigoApoderado);
+	
+	public Apoderado setMonto(Apoderado apoderado, Integer monto);
 }
