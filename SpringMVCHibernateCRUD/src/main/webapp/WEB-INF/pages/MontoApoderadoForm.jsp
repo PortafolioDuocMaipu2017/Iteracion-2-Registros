@@ -11,7 +11,7 @@
 <body>
     <div align="center">
         <h1>Apoderado</h1>
-        <form:form action="guardarApoderado" method="post" modelAttribute="apoderado">
+        <form:form action="guardarMontoApoderado" method="post" modelAttribute="apoderado">
         <table>
             <form:hidden path="codigoApoderado"/>
             <tr>

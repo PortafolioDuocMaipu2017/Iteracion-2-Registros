@@ -80,12 +80,23 @@ public class ApoderadoController {
 	@RequestMapping(value = "/montoApoderado", method = RequestMethod.GET)
 	public ModelAndView montoApoderado(HttpServletRequest request) {
 		int codigoApoderado = Integer.parseInt(request.getParameter("codigoApoderado"));
-		int monto = Integer.parseInt(request.getParameter("monto"));
-		Apoderado llamado = apoderadoservice.getApoderado(codigoApoderado);
-		Apoderado apoderado = apoderadoservice.setMonto(llamado, monto);
+		Apoderado apoderado = apoderadoservice.getApoderado(codigoApoderado);		
 		ModelAndView model = new ModelAndView("MontoApoderadoForm");
+		//int monto = Integer.parseInt(request.getParameter("monto"));		
+		//Apoderado apoderado = apoderadoservice.setMonto(llamado, monto);//
+		
 		model.addObject("apoderado", apoderado);
-
 		return model;
+	}
+	@RequestMapping(value = "/guardarMontoApoderado", method = RequestMethod.POST)
+	public ModelAndView guardarMontoApoderado(@ModelAttribute Apoderado apoderado,HttpServletRequest request) {
+		int monto = Integer.parseInt(request.getParameter("monto"));
+		int codigoApoderado = Integer.parseInt(request.getParameter("codigoApoderado"));
+		Apoderado apoderadoCambio = apoderadoservice.getApoderado(codigoApoderado);		
+		
+		Apoderado cambio = apoderadoservice.setMonto(apoderadoCambio, monto);
+		
+		apoderadoservice.updateApoderado(apoderadoCambio);
+		return new ModelAndView("redirect:/datos");
 	}
 }

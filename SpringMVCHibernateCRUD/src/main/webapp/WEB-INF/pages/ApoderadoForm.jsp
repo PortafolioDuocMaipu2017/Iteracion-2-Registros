@@ -26,6 +26,9 @@
                 <td>Fecha Ingreso:</td>
                 <td><form:input path="fechaIngreso" /></td>
             </tr>
+            <tr>
+               <form:hidden path="monto"/>
+            </tr>
               <tr>
                 <td>Rut Alumno a Cargo:</td>
                 <td><form:input path="rutAlCargo" /></td>

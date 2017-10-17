@@ -63,8 +63,7 @@ public class ActividadController {
 		int codigoActividad = Integer.parseInt(request.getParameter("codigoActividad"));
 		Actividad actividad = actividadservice.getActividad(codigoActividad);
 		ModelAndView model = new ModelAndView("ActividadForm");
-		model.addObject("actividad", actividad);
-		
+		model.addObject("actividad", actividad);		
 		return model;
 	}
 }

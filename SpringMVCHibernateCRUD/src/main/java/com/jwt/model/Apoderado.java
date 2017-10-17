@@ -25,16 +25,16 @@ public class Apoderado implements Serializable {
 	private String apellido;
 	
 	@Column
-	private String fechaIngreso;
-	
-	@Column
-	private int monto;
+	private String fechaIngreso;	
 	
 	@Column
 	private int rutAlCargo;
 	
 	@Column
 	private char dv;
+	
+	@Column
+	private int monto;
 
 	public int getCodigoApoderado() {
 		return codigoApoderado;

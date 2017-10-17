@@ -27,7 +27,7 @@
 					<td>${apoderado.nombre}</td>
 					<td>${apoderado.apellido}</td>
 					<td>${apoderado.fechaIngreso}</td>
-					<td>$${apoderado.monto}</td>
+					<td>${apoderado.monto}</td>
 					<td>${apoderado.rutAlCargo}-${apoderado.dv}</td>
 					<td><a href="editarApoderado?codigoApoderado=${apoderado.codigoApoderado}">Editar</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a
